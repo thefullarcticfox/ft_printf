@@ -14,8 +14,7 @@ CFLAGS = -Wall -Wextra -Werror -I$(INCLUDEDIR) -c
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rc $(NAME) $?
-	ranlib $(NAME)
+	ar rcs $(NAME) $?
 
 %.o: %.c $(HEADERS) $(LIBFT)
 	$(CC) $(CFLAGS) $< -o $@
